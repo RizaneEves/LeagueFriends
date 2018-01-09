@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChampList from './ChampList';
 import SearchBox from './SearchBox';
+import Scroll from './Scroll'
 import { champions } from './champions';
 
 
@@ -8,10 +9,15 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			champions: champions,
+			champions: {},
 			searchfield: ''
 		};
 	}
+
+	componentDidMount() {
+		this.setState({champions: champions});
+	}
+
 
 	onSearchChange = (event) => {
 		this.setState({searchfield: event.target.value});
@@ -27,10 +33,12 @@ class App extends Component {
 			}, {});
 
 		return (
-		<div className = "tc">
-			<h1>LeagueFriends</h1>
+		<div className='tc'>
+			<h1 className='f1'>LeagueFriends</h1>
 			<SearchBox searchChange={this.onSearchChange}/>
-			<ChampList champions={filteredChampions}/>
+			<Scroll>
+				<ChampList champions={filteredChampions}/>
+			</Scroll>
 		</div>
 	);
 	}	

@@ -1,5 +1,19 @@
+@font-face {
+	font-family: 'BeaufortforLOL-Bold';
+	src: url('Beaufort-Bold.woff') format('woff'),
+		 url('Beaufort-Bold.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  background: linear-gradient(to left, rgba(7,27,82,1) 0%, rgba(0,128,128,1) 100%);
+  font-family: 'BeaufortforLOL-Bold', sans-serif;
+color: gold;
+}
+
+h1 {
+
+	font-family: 'BeaufortforLOL-Bold', sans-serif;
+	color: gold;
 }
