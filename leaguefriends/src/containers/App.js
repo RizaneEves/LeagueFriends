@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import ChampList from './ChampList';
-import SearchBox from './SearchBox';
-import Scroll from './Scroll'
-import { champions } from './champions';
+import './App.css'
+import ChampList from '../components/ChampList';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll'
+import { champions } from '../champions';
 
 
 class App extends Component {
@@ -24,9 +25,9 @@ class App extends Component {
 	}
 
 	render() {
-
-		const filteredChampions = Object.keys(this.state.champions)
-			.filter(champion => champions[champion]['name'].toLowerCase().includes(this.state.searchfield.toLowerCase()))
+		const {champions, searchfield} = this.state;
+		const filteredChampions = Object.keys(champions)
+			.filter(champion => champions[champion]['name'].toLowerCase().includes(searchfield.toLowerCase()))
 			.reduce((obj, champion) => {
 				obj[champion] = champions[champion];
 				return obj;

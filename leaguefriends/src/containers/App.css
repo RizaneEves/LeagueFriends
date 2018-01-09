@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'BeaufortforLOL-Bold';
+	src: url('Beaufort-Bold.woff') format('woff'),
+		 url('Beaufort-Bold.ttf') format('truetype');
+}
+
+h1 {
+
+	font-family: 'BeaufortforLOL-Bold', sans-serif;
+	color: gold;
+}
