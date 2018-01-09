@@ -15,7 +15,7 @@
     "eject": "react-scripts eject",
     "deploy":"npm run build && gh-pages -d build"
   },
-  "homepage": "http://rizaneeves.github.io",
+  "homepage": "http://rizaneeves.github.io/LeagueFriends",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   }
