@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css'
 import ChampList from '../components/ChampList';
 import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll'
+import Scroll from '../components/Scroll';
 import { champions } from '../champions';
 
 
